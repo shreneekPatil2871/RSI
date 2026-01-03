@@ -1,0 +1,95 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>NIFTY 50 RSI Screener</title>
+        <style>
+            body { font-family: 'Segoe UI', sans-serif; margin: 40px; background-color: #f4f7f6; color: #333; }
+            nav { margin-bottom: 30px; padding: 15px; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+            nav a { margin-right: 20px; text-decoration: none; color: #007bff; font-weight: bold; }
+            table { border-collapse: collapse; width: 100%; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+            th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+            th { background-color: #007bff; color: white; text-transform: uppercase; letter-spacing: 1px; }
+            .Oversold { color: #2ecc71; font-weight: bold; }
+            .Overbought { color: #e74c3c; font-weight: bold; }
+            .empty-msg { padding: 20px; text-align: center; color: #666; font-style: italic; }
+        </style>
+    </head>
+    <body>
+        <h1>NIFTY 50 Market Screener</h1>
+        
+        <nav>
+            <a href="#">🏠 Dashboard</a>
+            <a href="#table-top">📊 RSI Zones</a>
+            <a href="https://www.nseindia.com/" target="_blank">📈 NSE Live</a>
+        </nav>
+
+        <p><strong>Last Update:</strong> 2026-01-03 12:14:35 SGT</p>
+
+        <div id="table-top">
+            <table class="dataframe table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Symbol</th>
+      <th>RSI</th>
+      <th>Price</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ITC.NS</td>
+      <td>14.69</td>
+      <td>350.05</td>
+      <td>Oversold</td>
+    </tr>
+    <tr>
+      <td>TITAN.NS</td>
+      <td>70.85</td>
+      <td>4051.70</td>
+      <td>Overbought</td>
+    </tr>
+    <tr>
+      <td>INDUSINDBK.NS</td>
+      <td>71.05</td>
+      <td>902.45</td>
+      <td>Overbought</td>
+    </tr>
+    <tr>
+      <td>TATASTEEL.NS</td>
+      <td>71.18</td>
+      <td>182.88</td>
+      <td>Overbought</td>
+    </tr>
+    <tr>
+      <td>HINDALCO.NS</td>
+      <td>79.20</td>
+      <td>925.70</td>
+      <td>Overbought</td>
+    </tr>
+    <tr>
+      <td>NTPC.NS</td>
+      <td>81.63</td>
+      <td>352.10</td>
+      <td>Overbought</td>
+    </tr>
+    <tr>
+      <td>COALINDIA.NS</td>
+      <td>83.28</td>
+      <td>427.90</td>
+      <td>Overbought</td>
+    </tr>
+  </tbody>
+</table>
+        </div>
+
+        <script>
+            // Highlight the text colors
+            document.querySelectorAll('td').forEach(td => {
+                if (td.innerText === 'Oversold') td.classList.add('Oversold');
+                if (td.innerText === 'Overbought') td.classList.add('Overbought');
+            });
+        </script>
+    </body>
+    </html>
+    
